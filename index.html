@@ -22,15 +22,16 @@
     />
   </head>
   <body>
+    <!-- CABEÇALHO -->
     <header>
-      <nav
-        class="navbar navbar-expand-md border-bottom bg-dark"
-        data-bs-theme="dark"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img src="assets/images/logo-branco.png" alt="Logo"
-          /></a>
+      <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+        <div class="container-fluid d-flex flex-column align-items-center">
+          <!-- Logo centralizado -->
+          <a class="navbar-brand mb-2" href="index.html">
+            <img src="assets/images/logo-branco.png" alt="Logo" />
+          </a>
+
+          <!-- Botão de toggler e menu -->
           <button
             class="navbar-toggler"
             type="button"
@@ -42,8 +43,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarTogglerDemo02"
+          >
+            <ul class="navbar-nav nav-underline mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
@@ -53,30 +58,62 @@
               <li class="nav-item">
                 <a class="nav-link" href="estilos.html">Estilos</a>
               </li>
-
-              <!-- Usuário não logado -->
               <li class="nav-item">
                 <a class="nav-link" href="cadastro.html">Cadastro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="login.html">Login</a>
               </li>
-
-              <!-- Usuário logado -->
-              <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="./admin/meu-perfil.html">Meu Perfil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="?sair">Sair</a>
-                        </li>
-                        -->
             </ul>
           </div>
         </div>
+
+        <!-- Usuário não logado -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="cadastro.html">Cadastro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li> -->
+
+        <!-- Usuário logado -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="./admin/meu-perfil.html">Meu Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?sair">Sair</a>
+        </li> -->
       </nav>
     </header>
     <main>
+      <!-- HERO -->
+      <section
+        class="bg-dark text-light d-flex align-items-center"
+        style="
+          min-height: 50vh;
+          background: url('assets/images/background-hero.png') center/cover
+            no-repeat;
+        "
+      >
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-6">
+              <h1 class="fw-bold" style="color: #cb002d">Arcane Ink.</h1>
+              <p class="lead">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+              <a href="#artistas" class="btn btn-danger mt-3"
+                >Conheça nossos artistas</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTISTAS -->
       <section class="usuarios">
         <h2 class="text-center m-3">Artistas Destaque</h2>
         <div class="container">
@@ -91,100 +128,49 @@
                   style="min-height: 520px; filter: grayscale(100%)"
                 />
                 <div
-                  class="card-img-overlay d-flex flex-column justify-content-between"
+                  class="card-img-overlay d-flex flex-column justify-content-end"
                 >
-                  <h5 class="card-title">Nome do Artista</h5>
-                  <p class="text-center">
+                  <p class="text-center mb-3">
                     <a href="artista.php?id=1" class="btn btn-danger"
-                      >Veja mais</a
+                      >Marina Tanaka</a
                     >
                   </p>
                 </div>
               </div>
             </div>
-
-            <!-- Artista -->
             <div class="col-12 col-md-6 col-lg-4">
               <div class="card text-bg-dark m-4">
                 <img
                   src="assets/images/perfil/tanaka.jpg"
                   class="card-img foto-de-perfil w-150 h-100"
                   alt="Imagem do perfil"
-                  style="min-height: 520px"
+                  style="min-height: 520px; filter: grayscale(100%)"
                 />
                 <div
-                  class="card-img-overlay d-flex flex-column justify-content-between"
+                  class="card-img-overlay d-flex flex-column justify-content-end"
                 >
-                  <h5 class="card-title">Nome do Artista</h5>
-                  <p class="text-center">
+                  <p class="text-center mb-3">
                     <a href="artista.php?id=1" class="btn btn-danger"
-                      >Veja mais</a
+                      >Marina Tanaka</a
                     >
                   </p>
                 </div>
               </div>
             </div>
-
-            <!-- Artista -->
             <div class="col-12 col-md-6 col-lg-4">
               <div class="card text-bg-dark m-4">
                 <img
                   src="assets/images/perfil/tanaka.jpg"
                   class="card-img foto-de-perfil w-150 h-100"
                   alt="Imagem do perfil"
-                  style="min-height: 520px"
+                  style="min-height: 520px; filter: grayscale(100%)"
                 />
                 <div
-                  class="card-img-overlay d-flex flex-column justify-content-between"
+                  class="card-img-overlay d-flex flex-column justify-content-end"
                 >
-                  <h5 class="card-title">Nome do Artista</h5>
-                  <p class="text-center">
+                  <p class="text-center mb-3">
                     <a href="artista.php?id=1" class="btn btn-danger"
-                      >Veja mais</a
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Artista -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card text-bg-dark m-4">
-                <img
-                  src="assets/images/perfil/tanaka.jpg"
-                  class="card-img foto-de-perfil w-150 h-100"
-                  alt="Imagem do perfil"
-                  style="min-height: 520px"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">Nome do Artista</h5>
-                  <p class="text-center">
-                    <a href="artista.php?id=1" class="btn btn-danger"
-                      >Veja mais</a
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Artista -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card text-bg-dark m-4">
-                <img
-                  src="assets/images/perfil/tanaka.jpg"
-                  class="card-img foto-de-perfil w-150 h-100"
-                  alt="Imagem do perfil"
-                  style="min-height: 520px"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">Nome do Artista</h5>
-                  <p class="text-center">
-                    <a href="artista.php?id=1" class="btn btn-danger"
-                      >Veja mais</a
+                      >Marina Tanaka</a
                     >
                   </p>
                 </div>
@@ -194,6 +180,7 @@
         </div>
       </section>
 
+      <!-- ESTILOS -->
       <section class="estilos">
         <h2 class="text-center">Estilos</h2>
         <div class="container text-center">
@@ -242,6 +229,7 @@
         </div>
       </section>
 
+      <!-- PORTFOLIO -->
       <section class="portfolio">
         <h2 class="text-center m-3 p-3">Tatuagens Destaque</h2>
         <div class="container">
@@ -298,6 +286,8 @@
         </div>
       </section>
     </main>
+
+    <!-- RODAPE -->
     <footer>
       <div class="text-center text-bg-dark">
         <p class="p-4 pb-1">Alguns direitos reservados &copy;</p>
