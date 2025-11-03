@@ -47,6 +47,7 @@ footer .btn {
 
 /* Ao passar o mouse nos botões */
 footer .btn:hover {
+  color: #cb002d;
   border-color: #cb002d;
   background-color: #ffffff10; /* leve fundo translúcido para destacar */
 }
