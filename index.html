@@ -27,11 +27,10 @@
       <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
         <div class="container-fluid d-flex flex-column align-items-center">
           <!-- Logo centralizado -->
-          <a class="navbar-brand mb-2" href="index.html">
+          <a class="navbar-brand" href="index.html">
             <img src="assets/images/logo-branco.png" alt="Logo" />
+            <h1 class="logo-title" style="color: #cb002d">Arcane Ink</h1>
           </a>
-
-          <h1>Arcane Ink</h1>
 
           <!-- Botão de toggler e menu -->
           <button
@@ -92,7 +91,7 @@
       <section
         class="text-light d-flex align-items-center"
         style="
-          min-height: 48vh;
+          min-height: 60vh;
           background: url('assets/images/background-hero.png') center/cover
             no-repeat;
         "
@@ -100,15 +99,20 @@
         <div class="container py-5">
           <div class="row">
             <div class="col-lg-6">
-              <h1 class="fw-bold" style="color: #cb002d">Arcane Ink.</h1>
+              <h1 class="fw-bold" style="color: #cb002d; margin: 8px">
+                Arcane Ink.
+              </h1>
               <p class="lead">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
-              <a href="#artistas" class="btn btn-danger mt-3"
-                >Conheça nossos artistas</a
+              <a
+                href="#artistas"
+                class="btn btn-grande mt-3"
+                style="background-color: #a10023; color: #fff; padding: 20px"
+                >Se cadastre e ganhe 5% na primeira tatuagem</a
               >
             </div>
           </div>
@@ -123,31 +127,40 @@
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <!-- Artista 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card text-bg-dark m-4">
+            <div class="col">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalTanaka"
+                style="cursor: pointer"
+              >
                 <img
                   src="assets/images/perfil/tanaka.jpg"
-                  class="card-img foto-de-perfil w-150 h-100"
+                  class="card-img foto-de-perfil"
                   alt="Imagem do perfil"
-                  style="min-height: 520px; filter: grayscale(100%)"
+                  style="max-height: 520px; filter: grayscale(100%)"
                 />
                 <div
                   class="card-img-overlay d-flex flex-column justify-content-end"
                 >
                   <p class="text-center mb-3">
-                    <a href="artista.php?id=1" class="btn btn-danger"
-                      >Marina Tanaka</a
-                    >
+                    <span class="btn btn-danger">Marina Tanaka</span>
                   </p>
                 </div>
               </div>
             </div>
+
             <!-- Artista 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card text-bg-dark m-4">
+            <div class="col">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalErick"
+                style="cursor: pointer"
+              >
                 <img
                   src="assets/images/perfil/erick.jpg"
-                  class="card-img foto-de-perfil w-150 h-100"
+                  class="card-img foto-de-perfil"
                   alt="Imagem do perfil"
                   style="min-height: 520px; filter: grayscale(100%)"
                 />
@@ -155,29 +168,31 @@
                   class="card-img-overlay d-flex flex-column justify-content-end"
                 >
                   <p class="text-center mb-3">
-                    <a href="artista.php?id=1" class="btn btn-danger"
-                      >Erick Oscar</a
-                    >
+                    <span class="btn btn-danger">Erick Oscar</span>
                   </p>
                 </div>
               </div>
             </div>
+
             <!-- Artista 3 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card text-bg-dark m-4">
+            <div class="col">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalAnna"
+                style="cursor: pointer"
+              >
                 <img
                   src="assets/images/perfil/anna.jpg"
-                  class="card-img foto-de-perfil w-150 h-100"
+                  class="card-img foto-de-perfil"
                   alt="Imagem do perfil"
-                  style="min-height: 520px; filter: grayscale(100%)"
+                  style="max-height: 520px; filter: grayscale(100%)"
                 />
                 <div
                   class="card-img-overlay d-flex flex-column justify-content-end"
                 >
                   <p class="text-center mb-3">
-                    <a href="artista.php?id=1" class="btn btn-danger"
-                      >Anna Clara</a
-                    >
+                    <span class="btn btn-danger">Anna Clara</span>
                   </p>
                 </div>
               </div>
@@ -186,14 +201,163 @@
         </div>
       </section>
 
+      <!-- MODAIS DOS ARTISTAS -->
+      <!-- Modal Marina -->
+      <div class="modal fade" id="modalTanaka" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div
+            class="modal-content"
+            style="
+              color: #cb002d;
+              background-color: #1a1b1dde;
+              min-height: 80vh;
+            "
+          >
+            <!-- Header com nome e Instagram juntos -->
+            <div
+              class="modal-header flex-column align-items-center border-0 pb-0"
+            >
+              <h4 class="modal-title mb-1">Marina Tanaka</h4>
+              <h6 class="mb-0">
+                Instagram:
+                <a href="https://instagram.com/_tanaka11_" target="_blank"
+                  >@_Tanaka11_</a
+                >
+              </h6>
+              <button
+                type="button"
+                class="btn-close btn-close-red position-absolute top-0 end-0 m-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="modal-body text-center pt-3">
+              <h6 class="mt-4">Portfólio</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/portfolio/tanaka1.jpg"
+                  class="m-2"
+                  width="320"
+                />
+                <img
+                  src="assets/images/portfolio/tanaka2.jpg"
+                  class="m-2"
+                  width="320"
+                />
+                <img
+                  src="assets/images/portfolio/tanaka3.jpg"
+                  class="m-2"
+                  width="320"
+                />
+                <img
+                  src="assets/images/portfolio/tanaka4.jpg"
+                  class="m-2"
+                  width="320"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Erick -->
+      <div class="modal fade" id="modalErick" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content text-bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Erick Oscar</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                Instagram:
+                <a href="https://instagram.com/erickoscar" target="_blank"
+                  >@erickoscar</a
+                >
+              </p>
+              <h6 class="mt-4">Portfólio</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/portfolio/erick1.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/portfolio/erick2.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/portfolio/erick3.jpg"
+                  class="m-2"
+                  width="150"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Anna -->
+      <div class="modal fade" id="modalAnna" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content text-bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Anna Clara</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                Instagram:
+                <a href="https://instagram.com/annaclara" target="_blank"
+                  >@annaclara</a
+                >
+              </p>
+              <h6 class="mt-4">Portfólio</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/portfolio/anna1.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/portfolio/anna2.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/portfolio/anna3.jpg"
+                  class="m-2"
+                  width="150"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- ESTILOS -->
       <section class="estilos">
         <h2 class="text-center">Estilos</h2>
         <div class="container text-center">
           <div class="row">
-            <!-- Estilo -->
+            <!-- Lettering -->
             <div class="col-md-3">
-              <div class="card text-bg-dark m-4">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalLettering"
+                style="cursor: pointer"
+              >
                 <div
                   class="card-body d-flex align-items-center justify-content-center"
                 >
@@ -202,8 +366,14 @@
               </div>
             </div>
 
+            <!-- Realismo -->
             <div class="col-md-3">
-              <div class="card text-bg-dark m-4">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalRealismo"
+                style="cursor: pointer"
+              >
                 <div
                   class="card-body d-flex align-items-center justify-content-center"
                 >
@@ -212,8 +382,14 @@
               </div>
             </div>
 
+            <!-- Fine-Line -->
             <div class="col-md-3">
-              <div class="card text-bg-dark m-4">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalFineLine"
+                style="cursor: pointer"
+              >
                 <div
                   class="card-body d-flex align-items-center justify-content-center"
                 >
@@ -222,8 +398,14 @@
               </div>
             </div>
 
+            <!-- Tribal -->
             <div class="col-md-3">
-              <div class="card text-bg-dark m-4">
+              <div
+                class="card text-bg-dark m-4"
+                data-bs-toggle="modal"
+                data-bs-target="#modalTribal"
+                style="cursor: pointer"
+              >
                 <div
                   class="card-body d-flex align-items-center justify-content-center"
                 >
@@ -235,6 +417,187 @@
         </div>
       </section>
 
+      <!-- MODAIS DOS ESTILOS -->
+
+      <!-- Modal Lettering -->
+      <div
+        class="modal fade"
+        id="modalLettering"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content text-bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Lettering</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                O estilo <strong>Lettering</strong> é focado em tipografia e
+                letras artísticas. Cada traço é desenhado à mão, criando frases
+                ou palavras com estilos únicos.
+              </p>
+              <h6 class="mt-4">Exemplos</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/estilos/lettering1.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/lettering2.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/lettering3.jpg"
+                  class="m-2"
+                  width="150"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Realismo -->
+      <div
+        class="modal fade"
+        id="modalRealismo"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content text-bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Realismo</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                O estilo <strong>Realismo</strong> busca reproduzir imagens com
+                o máximo de fidelidade, como retratos, animais ou cenas
+                realistas, utilizando sombras e profundidade.
+              </p>
+              <h6 class="mt-4">Exemplos</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/estilos/realismo1.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/realismo2.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/realismo3.jpg"
+                  class="m-2"
+                  width="150"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Fine-Line -->
+      <div
+        class="modal fade"
+        id="modalFineLine"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content text-bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Fine-Line</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                O estilo <strong>Fine-Line</strong> é caracterizado por linhas
+                finas e delicadas, geralmente com traços contínuos e elegantes,
+                ideal para desenhos sutis e minimalistas.
+              </p>
+              <h6 class="mt-4">Exemplos</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/estilos/fineline1.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/fineline2.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/fineline3.jpg"
+                  class="m-2"
+                  width="150"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Tribal -->
+      <div class="modal fade" id="modalTribal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content text-bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Tribal</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                O estilo <strong>Tribal</strong> é um dos mais antigos do mundo,
+                composto por linhas grossas e padrões geométricos inspirados em
+                culturas tradicionais.
+              </p>
+              <h6 class="mt-4">Exemplos</h6>
+              <div class="d-flex flex-wrap justify-content-center">
+                <img
+                  src="assets/images/estilos/tribal1.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/tribal2.jpg"
+                  class="m-2"
+                  width="150"
+                />
+                <img
+                  src="assets/images/estilos/tribal3.jpg"
+                  class="m-2"
+                  width="150"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- PORTFOLIO -->
       <section class="portfolio">
         <h2 class="text-center m-3 p-3">Tatuagens Destaque</h2>
@@ -244,10 +607,10 @@
             <div class="col mb-4">
               <div class="card text-bg-dark">
                 <img
-                  src="assets/images/portfolio/tatuagem1.jpg"
+                  src="assets/images/portfolio/tanaka1.jpg"
                   class="card-img foto-portfolio align-self-center w-100 h-100"
                   alt="Foto Portfolio"
-                  style="min-height: 460px"
+                  style="min-height: 520px"
                 />
                 <div class="card-img-overlay">
                   <h5 class="card-title">Fine-Line</h5>
@@ -260,10 +623,10 @@
             <div class="col mb-4">
               <div class="card text-bg-dark">
                 <img
-                  src="assets/images/portfolio/tatuagem2.jpg"
+                  src="assets/images/portfolio/tanaka2.jpg"
                   class="card-img foto-portfolio align-self-center w-100 h-100"
                   alt="Foto Portfolio"
-                  style="min-height: 460px"
+                  style="min-height: 520px"
                 />
                 <div class="card-img-overlay">
                   <h5 class="card-title">Lettering</h5>
@@ -276,10 +639,10 @@
             <div class="col mb-4">
               <div class="card text-bg-dark">
                 <img
-                  src="assets/images/portfolio/tatuagem3.jpg"
+                  src="assets/images/portfolio/tanaka3.jpg"
                   class="card-img foto-portfolio align-self-center w-100 h-100"
                   alt="Foto Portfolio"
-                  style="min-height: 460px"
+                  style="max-height: 520px"
                 />
                 <div class="card-img-overlay">
                   <h5 class="card-title">Fine-Line</h5>

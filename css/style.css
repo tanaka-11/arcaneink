@@ -60,3 +60,75 @@ footer .btn i {
 footer .btn:hover i {
   color: #cb002d;
 }
+
+/* Ao passar o mouse no modal */
+#modalTanaka img {
+  transition: transform 0.3s ease; /* Transição suave */
+  cursor: pointer; /* Mostra o cursor de clique */
+}
+
+#modalTanaka img:hover {
+  transform: scale(1.05); /* Aumenta 10% o tamanho */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 2; /* Garante que a imagem fique por cima das outras */
+}
+
+/* Botão de fechar do modal */
+.btn-close-red {
+  filter: none !important; /* remove filtro padrão */
+  opacity: 1 !important; /* garante visibilidade total */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='%23cb002d' stroke-linecap='round' stroke-width='2' d='M3 3l10 10M13 3L3 13'/%3e%3c/svg%3e") !important;
+}
+
+/* Hover do Card Estilos */
+.estilos .card {
+  transition: transform 0.3s, box-shadow 0.3s; /* animação suave */
+}
+
+.estilos .card:hover {
+  transform: translateY(-10px); /* eleva o card ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* adiciona sombra */
+}
+
+/* Tamanho do botão desconto */
+.btn-grande {
+  font-size: 1.5rem; /* aumenta a fonte */
+  font-weight: bold; /* deixa em negrito */
+  overflow: hidden;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* animação suave */
+}
+
+.btn-grande:hover {
+  transform: scale(1.05); /* aumenta levemente 5% */
+  background-color: #e60029; /* opcional: muda a cor suavemente */
+}
+
+/* Hover dos Cards Artistas */
+.usuarios .card-img {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.usuarios .card:hover .card-img {
+  transform: scale(1.05); /* aumenta 5% */
+}
+.usuarios .card {
+  overflow: hidden;
+}
+
+/* Hover dos Cards Portfolio */
+.portfolio .card {
+  overflow: hidden; /* garante que a imagem não "vaze" do card */
+}
+
+.portfolio .card-img {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.portfolio .card:hover .card-img {
+  transform: scale(1.05); /* aumenta 5% ao passar o mouse */
+}
+
+/* Opcional: sombra no card */
+.portfolio .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
