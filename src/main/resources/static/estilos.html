@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArcaneINK | Cadastro</title>
+    <title>ArcaneINK | Estilos</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="shortcut icon"
-      href="assets/images/logo-preto.png"
+      href="images/logo-preto.png"
       type="image/x-icon"
     />
   </head>
@@ -28,7 +28,7 @@
       <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
         <div class="container-fluid d-flex flex-column align-items-center">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo-branco.png" alt="Logo" />
+            <img src="images/logo-branco.png" alt="Logo" />
             <h1 class="logo-title" style="color: #cb002d">Arcane Ink</h1>
           </a>
 
@@ -56,10 +56,10 @@
                 <a class="nav-link" href="artistas.html">Tatuadores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="estilos.html">Estilos</a>
+                <a class="nav-link active" href="estilos.html">Estilos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="cadastro.html">Cadastro</a>
+                <a class="nav-link" href="cadastro.html">Cadastro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="login.html">Login</a>
@@ -73,99 +73,83 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="py-5">
       <div class="container">
-        <h1 class="text-center mb-4" style="color: #cb002d">Cadastro</h1>
+        <h1 class="text-center mb-5" style="color: #cb002d">
+          Estilos de Tatuagem
+        </h1>
 
-        <form
-          action="#"
-          method="post"
-          class="p-4 rounded bg-body-tertiary text-dark"
-          enctype="multipart/form-data"
-        >
-          <!-- FOTO -->
-          <div class="form-floating m-3">
-            <input
-              class="form-control"
-              type="file"
-              name="foto-perfil"
-              id="foto-perfil"
-              placeholder="Foto de perfil"
-              accept="image/png, image/jpeg, image/gif, image/svg+xml"
-            />
-            <label for="foto-perfil">Foto de Perfil:</label>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-3 text-center text-bg-dark border-danger">
+              <div class="card-body">
+                <h5 class="card-title">Lettering</h5>
+                <a href="estilo.html?id=1" class="btn btn-outline-danger mt-3"
+                  >Acesse todas tatuagens deste estilo</a
+                >
+              </div>
+            </div>
           </div>
 
-          <!-- NOME -->
-          <div class="form-floating m-3">
-            <input
-              class="form-control"
-              type="text"
-              name="nome"
-              id="nome"
-              placeholder="Digite seu nome"
-              required
-            />
-            <label for="nome">Nome:</label>
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-3 text-center text-bg-dark border-danger">
+              <div class="card-body">
+                <h5 class="card-title">Realismo</h5>
+                <a href="estilo.html?id=2" class="btn btn-outline-danger mt-3"
+                  >Acesse todas tatuagens deste estilo</a
+                >
+              </div>
+            </div>
           </div>
 
-          <!-- EMAIL -->
-          <div class="form-floating m-3">
-            <input
-              class="form-control"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Digite seu e-mail"
-              required
-            />
-            <label for="email">E-mail:</label>
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-3 text-center text-bg-dark border-danger">
+              <div class="card-body">
+                <h5 class="card-title">Fine-Line</h5>
+                <a href="estilo.html?id=3" class="btn btn-outline-danger mt-3"
+                  >Acesse todas tatuagens deste estilo</a
+                >
+              </div>
+            </div>
           </div>
 
-          <!-- SENHA -->
-          <div class="form-floating m-3">
-            <input
-              class="form-control"
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Crie uma senha"
-              required
-            />
-            <label for="senha">Crie sua senha:</label>
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-3 text-center text-bg-dark border-danger">
+              <div class="card-body">
+                <h5 class="card-title">Tribal</h5>
+                <a href="estilo.html?id=4" class="btn btn-outline-danger mt-3"
+                  >Acesse todas tatuagens deste estilo</a
+                >
+              </div>
+            </div>
           </div>
 
-          <!-- TIPO -->
-          <div class="form-floating m-3">
-            <select class="form-select" name="tipo" id="tipo" required>
-              <option value="" disabled selected>Escolha um tipo</option>
-              <option value="tatuador">Tatuador</option>
-              <option value="cliente">Cliente</option>
-            </select>
-            <label for="tipo">Tipo de usuário:</label>
+          <!-- Card 5 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-3 text-center text-bg-dark border-danger">
+              <div class="card-body">
+                <h5 class="card-title">Old School</h5>
+                <a href="estilo.html?id=5" class="btn btn-outline-danger mt-3"
+                  >Acesse todas tatuagens deste estilo</a
+                >
+              </div>
+            </div>
           </div>
 
-          <!-- DESCRIÇÃO -->
-          <div class="form-floating m-3">
-            <textarea
-              class="form-control"
-              style="resize: none; height: 120px"
-              name="descricao"
-              id="descricao"
-              placeholder="Fale sobre você"
-            ></textarea>
-            <label for="descricao">Sobre você:</label>
+          <!-- Card 6 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-3 text-center text-bg-dark border-danger">
+              <div class="card-body">
+                <h5 class="card-title">Geométrico</h5>
+                <a href="estilo.html?id=6" class="btn btn-outline-danger mt-3"
+                  >Acesse todas tatuagens deste estilo</a
+                >
+              </div>
+            </div>
           </div>
-
-          <!-- BOTÃO -->
-          <div class="text-center m-3">
-            <button
-              class="btn btn-danger px-5 py-2 fw-semibold"
-              type="submit"
-              name="cadastrar"
-            >
-              Cadastrar
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </main>
 

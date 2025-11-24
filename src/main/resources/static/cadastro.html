@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArcaneINK | Login</title>
+    <title>ArcaneINK | Cadastro</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="shortcut icon"
-      href="assets/images/logo-preto.png"
+      href="images/logo-preto.png"
       type="image/x-icon"
     />
   </head>
@@ -28,7 +28,7 @@
       <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
         <div class="container-fluid d-flex flex-column align-items-center">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo-branco.png" alt="Logo" />
+            <img src="images/logo-branco.png" alt="Logo" />
             <h1 class="logo-title" style="color: #cb002d">Arcane Ink</h1>
           </a>
 
@@ -59,10 +59,10 @@
                 <a class="nav-link" href="estilos.html">Estilos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastro</a>
+                <a class="nav-link active" href="cadastro.html">Cadastro</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="login.html">Login</a>
+                <a class="nav-link" href="login.html">Login</a>
               </li>
             </ul>
           </div>
@@ -73,27 +73,51 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="py-5">
       <div class="container">
-        <h1 class="text-center mb-4" style="color: #cb002d">Login</h1>
-
-        <!-- ALERTA DE FEEDBACK (EXEMPLO) -->
-        <p class="alert alert-warning text-center">Preencha e-mail e senha</p>
+        <h1 class="text-center mb-4" style="color: #cb002d">Cadastro</h1>
 
         <form
           action="#"
           method="post"
           class="p-4 rounded bg-body-tertiary text-dark"
+          enctype="multipart/form-data"
         >
+          <!-- FOTO -->
+          <div class="form-floating m-3">
+            <input
+              class="form-control"
+              type="file"
+              name="foto-perfil"
+              id="foto-perfil"
+              placeholder="Foto de perfil"
+              accept="image/png, image/jpeg, image/gif, image/svg+xml"
+            />
+            <label for="foto-perfil">Foto de Perfil:</label>
+          </div>
+
+          <!-- NOME -->
+          <div class="form-floating m-3">
+            <input
+              class="form-control"
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+            <label for="nome">Nome:</label>
+          </div>
+
           <!-- EMAIL -->
           <div class="form-floating m-3">
             <input
               class="form-control"
               type="email"
-              id="email"
               name="email"
+              id="email"
               placeholder="Digite seu e-mail"
               required
             />
-            <label for="email">E-mail</label>
+            <label for="email">E-mail:</label>
           </div>
 
           <!-- SENHA -->
@@ -101,12 +125,34 @@
             <input
               class="form-control"
               type="password"
-              id="senha"
               name="senha"
-              placeholder="Digite sua senha"
+              id="senha"
+              placeholder="Crie uma senha"
               required
             />
-            <label for="senha">Senha</label>
+            <label for="senha">Crie sua senha:</label>
+          </div>
+
+          <!-- TIPO -->
+          <div class="form-floating m-3">
+            <select class="form-select" name="tipo" id="tipo" required>
+              <option value="" disabled selected>Escolha um tipo</option>
+              <option value="tatuador">Tatuador</option>
+              <option value="cliente">Cliente</option>
+            </select>
+            <label for="tipo">Tipo de usuário:</label>
+          </div>
+
+          <!-- DESCRIÇÃO -->
+          <div class="form-floating m-3">
+            <textarea
+              class="form-control"
+              style="resize: none; height: 120px"
+              name="descricao"
+              id="descricao"
+              placeholder="Fale sobre você"
+            ></textarea>
+            <label for="descricao">Sobre você:</label>
           </div>
 
           <!-- BOTÃO -->
@@ -114,9 +160,9 @@
             <button
               class="btn btn-danger px-5 py-2 fw-semibold"
               type="submit"
-              name="entrar"
+              name="cadastrar"
             >
-              Entrar
+              Cadastrar
             </button>
           </div>
         </form>
@@ -157,3 +203,29 @@
     ></script>
   </body>
 </html>
+<script>
+document.querySelector("form").addEventListener("submit", async function(e) {
+  e.preventDefault(); // evita recarregar a página
+
+  const usuario = {
+    nome: document.getElementById("nome").value,
+    email: document.getElementById("email").value,
+    senha: document.getElementById("senha").value,
+    // você pode adicionar "tipo" e "descricao" se quiser salvar também
+  };
+
+  const response = await fetch("/api/usuario/cadastro", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(usuario)
+  });
+
+  if (response.ok) {
+    alert("Usuário cadastrado com sucesso!");
+  } else {
+    alert("Erro ao cadastrar usuário");
+  }
+});
+</script>
