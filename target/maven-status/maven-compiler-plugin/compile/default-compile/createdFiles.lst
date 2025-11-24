@@ -1,0 +1,6 @@
+com\uninove\arcaneink\config\SecurityConfig.class
+com\uninove\arcaneink\ArcaneinkApplication.class
+com\uninove\arcaneink\model\Usuario.class
+com\uninove\arcaneink\controller\UsuarioController.class
+com\uninove\arcaneink\repository\UsuarioRepository.class
+com\uninove\arcaneink\service\UsuarioService.class
