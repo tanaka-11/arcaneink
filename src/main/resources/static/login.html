@@ -79,44 +79,21 @@
                 <p class="alert alert-warning text-center">Preencha e-mail e senha</p>
 
                 <form th:action="@{/login}" method="post" class="p-4 rounded bg-body-tertiary text-dark">
-
-                    <!-- EMAIL -->
                     <div class="form-floating m-3">
-                        <input
-                            class="form-control"
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Digite seu e-mail"
-                            required
-                            />
+                        <input class="form-control" type="email" id="email" name="email" required />
                         <label for="email">E-mail</label>
                     </div>
-
-                    <!-- SENHA -->
                     <div class="form-floating m-3">
-                        <input
-                            class="form-control"
-                            type="password"
-                            id="senha"
-                            name="senha"
-                            placeholder="Digite sua senha"
-                            required
-                            />
+                        <input class="form-control" type="password" id="senha" name="senha" required />
                         <label for="senha">Senha</label>
                     </div>
-
-                    <!-- BOTÃO -->
                     <div class="text-center m-3">
-                        <button
-                            class="btn btn-danger px-5 py-2 fw-semibold"
-                            type="submit"
-                            name="entrar"
-                            >
-                            Entrar
-                        </button>
+                        <button class="btn btn-danger px-5 py-2 fw-semibold" type="submit">Entrar</button>
                     </div>
                 </form>
+
+                <div th:if="${erro}" class="alert alert-danger mt-3" th:text="${erro}"></div>
+
             </div>
         </main>
 
@@ -173,11 +150,16 @@
 
         if (response.ok) {
             const data = await response.json();
-            alert("Login realizado com sucesso! Bem-vindo " + data.nome);
-            // aqui você pode redirecionar para outra página:
-            // window.location.href = "index.html";
+            if (data && data.id) {
+                // redireciona direto para a página do usuário
+                window.location.href = "/usuario?id=" + data.id;
+            } else {
+                alert("Erro ao fazer login. Verifique e-mail e senha.");
+            }
         } else {
             alert("Erro ao fazer login. Verifique e-mail e senha.");
         }
     });
 </script>
+
+
