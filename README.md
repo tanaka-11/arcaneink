@@ -1,4 +1,3 @@
-````markdown
 # Arcane Ink
 
 ## 1. Sobre o Projeto
@@ -172,4 +171,3 @@ mvn test
 | Jhulia Napolioni | 3025200065 | Documentação, README, Design Figma                                     |
 | Gustavo Tenório  | 3025104768 | Documentação, README, Design Figma                                     |
 
-```
