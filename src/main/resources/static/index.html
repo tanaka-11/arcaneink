@@ -1,817 +1,678 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArcaneINK</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="images/logo-preto.png"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <!-- CABEÇALHO -->
-    <header>
-      <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
-        <div class="container-fluid d-flex flex-column align-items-center">
-          <!-- Logo centralizado -->
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo-branco.png" alt="Logo" />
-            <h1 class="logo-title" style="color: #cb002d">Arcane Ink</h1>
-          </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ArcaneINK</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+            />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+            />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="images/logo-preto.png"
+            type="image/x-icon"
+            />
+    </head>
+    <body>
+        <!-- CABEÇALHO -->
+        <header>
+            <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+                <div class="container-fluid d-flex flex-column align-items-center">
+                    <!-- Logo centralizado -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo-branco.png" alt="Logo" />
+                        <h1 class="logo-title" style="color: #cb002d">Arcane Ink</h1>
+                    </a>
 
-          <!-- Botão de toggler e menu -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+                    <!-- Botão de toggler e menu -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="navbarTogglerDemo02"
-          >
-            <ul class="navbar-nav nav-underline mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="artistas.html">Tatuadores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="estilos.html">Estilos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Usuário não logado -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="cadastro.html">Cadastro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li> -->
-
-        <!-- Usuário logado -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="./admin/meu-perfil.html">Meu Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?sair">Sair</a>
-        </li> -->
-      </nav>
-    </header>
-    <main>
-      <!-- HERO -->
-      <section
-        class="text-light d-flex align-items-center"
-        style="
-          min-height: 60vh;
-          background: url('images/background-hero.png') center/cover
-            no-repeat;
-        "
-      >
-        <div class="container py-5">
-          <div class="row">
-            <div class="col-lg-6">
-              <h1 class="fw-bold" style="color: #cb002d; margin: 8px">
-                Arcane Ink.
-              </h1>
-              <p class="lead">
-                Aqui, cada tattoo é feita com cuidado, criatividade e aquele toque único que faz a diferença. 
-                Nossa equipe curte ouvir suas ideias e transformá-las em algo que realmente combine com você. 
-                Chega mais e descubra um estúdio onde a vibe é boa, o traço é firme e cada detalhe importa.
-                <span>Bem-vindo ao <span style="color: #cb002d; font-weight: 500">Arcane Ink.</span></span>
-              </p>
-              <!-- Botão para abrir modal -->
-<a
-  href="#"
-  class="btn btn-grande mt-3"
-  style="background-color: #a10023; color: #fff; padding: 20px"
-  data-bs-toggle="modal"
-  data-bs-target="#modalAgendamento"
->
-  Agende já a sua tatuagem!
-</a>
-
-<!-- Modal Agendamento -->
-<div class="modal fade" id="modalAgendamento" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-bg-dark">
-      <div class="modal-header">
-        <h5 class="modal-title">Agendamento</h5>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <form id="formAgendamento">
-          <div class="mb-3">
-            <label for="nomeCliente" class="form-label">Seu Nome</label>
-            <input type="text" class="form-control" id="nomeCliente" placeholder="Digite seu nome" required />
-          </div>
-          <div class="mb-3">
-            <label for="nomeTatuador" class="form-label">Selecione o Tatuador</label>
-            <select class="form-select" id="nomeTatuador" required>
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="dataAgendamento" class="form-label">Data</label>
-            <input type="date" class="form-control" id="dataAgendamento" required />
-          </div>
-          <button type="submit" class="btn btn-danger w-100">Agendar</button>
-        </form>
-
-        <div id="mensagemAgendamento" class="mt-3 text-center" style="display:none; color:#cb002d;"></div>
-        <div id="erroAgendamento" class="mt-3 text-center" style="display:none; color:#ff4d4d;">
-          Ocorreu um erro ao realizar o agendamento.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ARTISTAS -->
-      <section class="usuarios">
-        <h2 class="text-center m-3" style="margin-top: 16px">
-          Artistas Destaque
-        </h2>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-            <!-- Artista 1 -->
-            <div class="col">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalTanaka"
-                style="cursor: pointer"
-              >
-                <img
-                  src="images/perfil/tanaka.jpg"
-                  class="card-img foto-de-perfil"
-                  alt="Imagem do perfil"
-                  style="min-height: 520px; filter: grayscale(100%)"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
-                >
-                  <p class="text-center mb-3">
-                    <span class="btn btn-danger">Marina Tanaka</span>
-                  </p>
+                    <div
+                        class="collapse navbar-collapse justify-content-center"
+                        id="navbarTogglerDemo02"
+                        >
+                        <ul class="navbar-nav nav-underline mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artistas.html">Tatuadores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="estilos.html">Estilos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cadastro.html">Cadastro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Login</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </div>
 
-            <!-- Artista 2 -->
-            <div class="col">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalErick"
-                style="cursor: pointer"
-              >
-                <img
-                  src="images/perfil/erick.jpg"
-                  class="card-img foto-de-perfil"
-                  alt="Imagem do perfil"
-                  style="min-height: 520px; filter: grayscale(100%)"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
+                <!-- Usuário não logado -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li> -->
+
+                <!-- Usuário logado -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="./admin/meu-perfil.html">Meu Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="?sair">Sair</a>
+                </li> -->
+            </nav>
+        </header>
+        <main>
+            <!-- HERO -->
+            <section
+                class="text-light d-flex align-items-center"
+                style="
+                min-height: 60vh;
+                background: url('images/background-hero.png') center/cover
+                no-repeat;
+                "
                 >
-                  <p class="text-center mb-3">
-                    <span class="btn btn-danger">Erick Oscar</span>
-                  </p>
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="fw-bold" style="color: #cb002d; margin: 8px">
+                                Arcane Ink.
+                            </h1>
+                            <p class="lead">
+                                Aqui, cada tattoo é feita com cuidado, criatividade e aquele toque único que faz a diferença. 
+                                Nossa equipe curte ouvir suas ideias e transformá-las em algo que realmente combine com você. 
+                                Chega mais e descubra um estúdio onde a vibe é boa, o traço é firme e cada detalhe importa.
+                                <span>Bem-vindo ao <span style="color: #cb002d; font-weight: 500">Arcane Ink.</span></span>
+                            </p>
+                            <!-- Botão para abrir modal -->
+                            <a
+                                href="#"
+                                class="btn btn-grande mt-3"
+                                style="background-color: #a10023; color: #fff; padding: 20px"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalAgendamento"
+                                >
+                                Agende já a sua tatuagem!
+                            </a>
+
+                            <!-- Modal Agendamento -->
+                            <div class="modal fade" id="modalAgendamento" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-md modal-dialog-centered">
+                                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde;">
+
+                                        <!-- Header -->
+                                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                                            <h4 class="modal-title mb-1">Agendamento</h4>
+                                            <p class="mb-0">Preencha os dados abaixo para agendar sua sessão.</p>
+                                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" 
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <!-- Body -->
+                                        <div class="modal-body pt-3">
+                                            <form id="formAgendamento" class="px-3">
+                                                <!-- Nome -->
+                                                <div class="form-floating mb-3">
+                                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Digite seu nome" required />
+                                                    <label for="nomeCliente">Seu Nome</label>
+                                                </div>
+
+                                                <!-- Tatuador -->
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="nomeTatuador" required>
+                                                        <option value="">Carregando...</option>
+                                                    </select>
+                                                    <label for="nomeTatuador">Selecione o Tatuador</label>
+                                                </div>
+
+                                                <!-- Data (normal) -->
+                                                <div class="form-floating mb-3">
+                                                    <input type="date" class="form-control" id="dataAgendamento" required />
+                                                    <label for="dataAgendamento">Data</label>
+                                                </div>
+
+                                                <!-- Botão centralizado -->
+                                                <div class="text-center mt-4">
+                                                    <button type="submit" class="btn btn-danger px-5 py-2 fw-semibold">Agendar</button>
+                                                </div>
+                                            </form>
+
+                                            <!-- Mensagens -->
+                                            <div id="mensagemAgendamento" class="mt-3 text-center" style="display:none; color:#cb002d;"></div>
+                                            <div id="erroAgendamento" class="mt-3 text-center" style="display:none; color:#ff4d4d;">
+                                                Ocorreu um erro ao realizar o agendamento.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
+            </section>
 
-            <!-- Artista 3 -->
-            <div class="col">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalAnna"
-                style="cursor: pointer"
-              >
-                <img
-                  src="images/perfil/anna.jpg"
-                  class="card-img foto-de-perfil"
-                  alt="Imagem do perfil"
-                  style="max-height: 520px; filter: grayscale(100%)"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
-                >
-                  <p class="text-center mb-3">
-                    <span class="btn btn-danger">Anna Clara</span>
-                  </p>
+            <!-- ARTISTAS -->
+            <section class="usuarios">
+                <h2 class="text-center m-3" style="margin-top: 16px">
+                    Artistas Destaque
+                </h2>
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                        <!-- Artista 1 -->
+                        <div class="col">
+                            <div
+                                class="card text-bg-dark m-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalTanaka"
+                                style="cursor: pointer"
+                                >
+                                <img
+                                    src="images/perfil/tanaka.jpg"
+                                    class="card-img foto-de-perfil"
+                                    alt="Imagem do perfil"
+                                    style="min-height: 520px; filter: grayscale(100%)"
+                                    />
+                                <div
+                                    class="card-img-overlay d-flex flex-column justify-content-end"
+                                    >
+                                    <p class="text-center mb-3">
+                                        <span class="btn btn-danger">Marina Tanaka</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Artista 2 -->
+                        <div class="col">
+                            <div
+                                class="card text-bg-dark m-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalErick"
+                                style="cursor: pointer"
+                                >
+                                <img
+                                    src="images/perfil/erick.jpg"
+                                    class="card-img foto-de-perfil"
+                                    alt="Imagem do perfil"
+                                    style="min-height: 520px; filter: grayscale(100%)"
+                                    />
+                                <div
+                                    class="card-img-overlay d-flex flex-column justify-content-end"
+                                    >
+                                    <p class="text-center mb-3">
+                                        <span class="btn btn-danger">Erick Oscar</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Artista 3 -->
+                        <div class="col">
+                            <div
+                                class="card text-bg-dark m-4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalAnna"
+                                style="cursor: pointer"
+                                >
+                                <img
+                                    src="images/perfil/anna.jpg"
+                                    class="card-img foto-de-perfil"
+                                    alt="Imagem do perfil"
+                                    style="max-height: 520px; filter: grayscale(100%)"
+                                    />
+                                <div
+                                    class="card-img-overlay d-flex flex-column justify-content-end"
+                                    >
+                                    <p class="text-center mb-3">
+                                        <span class="btn btn-danger">Anna Clara</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      <!-- MODAIS DOS ARTISTAS -->
-      <!-- Modal Marina -->
-      <div class="modal fade" id="modalTanaka" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div
-            class="modal-content"
-            style="
-              color: #cb002d;
-              background-color: #1a1b1dde;
-              min-height: 80vh;
-            "
-          >
-            <!-- Header com nome e Instagram juntos -->
-            <div
-              class="modal-header flex-column align-items-center border-0 pb-0"
-            >
-              <h4 class="modal-title mb-1">Marina Tanaka</h4>
-              <h6 class="mb-0">
-                Instagram:
-                <a href="https://instagram.com/_tanaka11_" target="_blank"
-                  >@_Tanaka11_</a
-                >
-              </h6>
-              <button
-                type="button"
-                class="btn-close btn-close-red position-absolute top-0 end-0 m-3"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
+            <!-- MODAIS DOS ARTISTAS -->
+            <!-- Modal Marina -->
+            <div class="modal fade" id="modalTanaka" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div
+                        class="modal-content"
+                        style="
+                        color: #cb002d;
+                        background-color: #1a1b1dde;
+                        min-height: 80vh;
+                        "
+                        >
+                        <!-- Header com nome e Instagram juntos -->
+                        <div
+                            class="modal-header flex-column align-items-center border-0 pb-0"
+                            >
+                            <h4 class="modal-title mb-1">Marina Tanaka</h4>
+                            <h6 class="mb-0">
+                                Instagram:
+                                <a href="https://instagram.com/_tanaka11_" target="_blank"
+                                   >@_Tanaka11_</a
+                                >
+                            </h6>
+                            <button
+                                type="button"
+                                class="btn-close btn-close-red position-absolute top-0 end-0 m-3"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                                ></button>
+                        </div>
 
-            <div class="modal-body text-center pt-3">
-              <h6 class="mt-4">Portfólio</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/portfolio/tanaka1.jpg"
-                  class="m-2"
-                  width="320"
-                />
-                <img
-                  src="images/portfolio/tanaka2.jpg"
-                  class="m-2"
-                  width="320"
-                />
-                <img
-                  src="images/portfolio/tanaka3.jpg"
-                  class="m-2"
-                  width="320"
-                />
-                <img
-                  src="images/portfolio/tanaka4.jpg"
-                  class="m-2"
-                  width="320"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Erick -->
-      <div class="modal fade" id="modalErick" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content text-bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title">Erick Oscar</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body text-center">
-              <p>
-                Instagram:
-                <a href="https://www.instagram.com/thatsoscar/" target="_blank"
-                  >@thatsoscar</a
-                >
-              </p>
-              <h6 class="mt-4">Portfólio</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/portfolio/erick1.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/portfolio/erick2.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/portfolio/erick3.jpg"
-                  class="m-2"
-                  width="150"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Anna -->
-      <div class="modal fade" id="modalAnna" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content text-bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title">Anna Clara</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body text-center">
-              <p>
-                Instagram:
-                <a href="https://instagram.com/annaclara" target="_blank"
-                  >@annaclara</a
-                >
-              </p>
-              <h6 class="mt-4">Portfólio</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/portfolio/anna1.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/portfolio/anna2.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/portfolio/anna3.jpg"
-                  class="m-2"
-                  width="150"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ESTILOS -->
-      <section class="estilos">
-        <h2 class="text-center">Estilos</h2>
-        <div class="container text-center">
-          <div class="row">
-            <!-- Lettering -->
-            <div class="col-md-3">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalLettering"
-                style="cursor: pointer"
-              >
-                <div
-                  class="card-body d-flex align-items-center justify-content-center"
-                >
-                  <h3 style="color: #cb002d" class="card-text">Lettering</h3>
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Portfólio</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img
+                                    src="images/portfolio/tanaka1.jpg"
+                                    class="m-2"
+                                    width="320"
+                                    />
+                                <img
+                                    src="images/portfolio/tanaka2.jpg"
+                                    class="m-2"
+                                    width="320"
+                                    />
+                                <img
+                                    src="images/portfolio/tanaka3.jpg"
+                                    class="m-2"
+                                    width="320"
+                                    />
+                                <img
+                                    src="images/portfolio/tanaka4.jpg"
+                                    class="m-2"
+                                    width="320"
+                                    />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
 
-            <!-- Realismo -->
-            <div class="col-md-3">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalRealismo"
-                style="cursor: pointer"
-              >
-                <div
-                  class="card-body d-flex align-items-center justify-content-center"
-                >
-                  <h3 style="color: #cb002d" class="card-text">Realismo</h3>
+            <!-- Modal Erick -->
+            <div class="modal fade" id="modalErick" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde; min-height:80vh;">
+                        <!-- Header -->
+                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                            <h4 class="modal-title mb-1">Erick Oscar</h4>
+                            <h6 class="mb-0">
+                                Instagram:
+                                <a href="https://www.instagram.com/thatsoscar/" target="_blank">@thatsoscar</a>
+                            </h6>
+                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Portfólio</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img src="images/portfolio/erick1.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/erick2.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/erick3.jpg" class="m-2" width="320"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
 
-            <!-- Fine-Line -->
-            <div class="col-md-3">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalFineLine"
-                style="cursor: pointer"
-              >
-                <div
-                  class="card-body d-flex align-items-center justify-content-center"
-                >
-                  <h3 style="color: #cb002d" class="card-text">Fine-Line</h3>
+            <!-- Modal Anna -->
+            <div class="modal fade" id="modalAnna" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde; min-height:80vh;">
+                        <!-- Header -->
+                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                            <h4 class="modal-title mb-1">Anna Clara</h4>
+                            <h6 class="mb-0">
+                                Instagram:
+                                <a href="https://instagram.com/annaclara" target="_blank">@annaclara</a>
+                            </h6>
+                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Portfólio</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img src="images/portfolio/anna1.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/anna2.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/anna3.jpg" class="m-2" width="320"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
 
-            <!-- Tribal -->
-            <div class="col-md-3">
-              <div
-                class="card text-bg-dark m-4"
-                data-bs-toggle="modal"
-                data-bs-target="#modalTribal"
-                style="cursor: pointer"
-              >
-                <div
-                  class="card-body d-flex align-items-center justify-content-center"
-                >
-                  <h3 style="color: #cb002d" class="card-text">Tribal</h3>
+            <!-- ESTILOS -->
+            <section class="estilos">
+                <h2 class="text-center">Estilos</h2>
+                <div class="container text-center">
+                    <div class="row">
+                        <!-- Lettering -->
+                        <div class="col-md-3">
+                            <div class="card text-bg-dark m-4" data-bs-toggle="modal" data-bs-target="#modalLettering" style="cursor: pointer">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <h3 style="color: #cb002d" class="card-text">Lettering</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Realismo -->
+                        <div class="col-md-3">
+                            <div class="card text-bg-dark m-4" data-bs-toggle="modal" data-bs-target="#modalRealismo" style="cursor: pointer">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <h3 style="color: #cb002d" class="card-text">Realismo</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fine-Line -->
+                        <div class="col-md-3">
+                            <div class="card text-bg-dark m-4" data-bs-toggle="modal" data-bs-target="#modalFineLine" style="cursor: pointer">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <h3 style="color: #cb002d" class="card-text">Fine-Line</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tribal -->
+                        <div class="col-md-3">
+                            <div class="card text-bg-dark m-4" data-bs-toggle="modal" data-bs-target="#modalTribal" style="cursor: pointer">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <h3 style="color: #cb002d" class="card-text">Tribal</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      <!-- MODAIS DOS ESTILOS -->
+            <!-- MODAIS DOS ESTILOS -->
 
-      <!-- Modal Lettering -->
-      <div
-        class="modal fade"
-        id="modalLettering"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content text-bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title">Lettering</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body text-center">
-              <p>
-                O estilo <strong>Lettering</strong> é focado em tipografia e
-                letras artísticas. Cada traço é desenhado à mão, criando frases
-                ou palavras com estilos únicos.
-              </p>
-              <h6 class="mt-4">Exemplos</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/estilos/lettering1.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/lettering2.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/lettering3.jpg"
-                  class="m-2"
-                  width="150"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <!-- Modal Lettering -->
+            <div class="modal fade" id="modalLettering" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde; min-height:80vh;">
+                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                            <h4 class="modal-title mb-1">Lettering</h4>
+                            <p class="mb-0">Estilo focado em tipografia e letras artísticas.</p>
+                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Exemplos</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img src="images/portfolio/tanaka4.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/tanaka2.jpg" class="m-2" width="320"/>
 
-      <!-- Modal Realismo -->
-      <div
-        class="modal fade"
-        id="modalRealismo"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content text-bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title">Realismo</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body text-center">
-              <p>
-                O estilo <strong>Realismo</strong> busca reproduzir imagens com
-                o máximo de fidelidade, como retratos, animais ou cenas
-                realistas, utilizando sombras e profundidade.
-              </p>
-              <h6 class="mt-4">Exemplos</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/estilos/realismo1.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/realismo2.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/realismo3.jpg"
-                  class="m-2"
-                  width="150"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Fine-Line -->
-      <div
-        class="modal fade"
-        id="modalFineLine"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content text-bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title">Fine-Line</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body text-center">
-              <p>
-                O estilo <strong>Fine-Line</strong> é caracterizado por linhas
-                finas e delicadas, geralmente com traços contínuos e elegantes,
-                ideal para desenhos sutis e minimalistas.
-              </p>
-              <h6 class="mt-4">Exemplos</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/estilos/fineline1.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/fineline2.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/fineline3.jpg"
-                  class="m-2"
-                  width="150"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Tribal -->
-      <div class="modal fade" id="modalTribal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content text-bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title">Tribal</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
-            <div class="modal-body text-center">
-              <p>
-                O estilo <strong>Tribal</strong> é um dos mais antigos do mundo,
-                composto por linhas grossas e padrões geométricos inspirados em
-                culturas tradicionais.
-              </p>
-              <h6 class="mt-4">Exemplos</h6>
-              <div class="d-flex flex-wrap justify-content-center">
-                <img
-                  src="images/estilos/tribal1.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/tribal2.jpg"
-                  class="m-2"
-                  width="150"
-                />
-                <img
-                  src="images/estilos/tribal3.jpg"
-                  class="m-2"
-                  width="150"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PORTFOLIO -->
-      <section class="portfolio">
-        <h2 class="text-center m-3 p-3">Tatuagens Destaque</h2>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- Item do portfólio -->
-            <div class="col mb-4">
-              <div class="card text-bg-dark">
-                <img
-                  src="images/portfolio/tanaka1.jpg"
-                  class="card-img foto-portfolio align-self-center w-100 h-100"
-                  alt="Foto Portfolio"
-                  style="min-height: 520px"
-                />
-                <div class="card-img-overlay">
-                  <h5 class="card-title">Fine-Line</h5>
-                  <p class="card-text">Descrição da tatuagem em destaque.</p>
-                  <p class="card-text"><small>Artista: Marina Tanaka</small></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
 
-            <div class="col mb-4">
-              <div class="card text-bg-dark">
-                <img
-                  src="images/portfolio/tanaka2.jpg"
-                  class="card-img foto-portfolio align-self-center w-100 h-100"
-                  alt="Foto Portfolio"
-                  style="min-height: 520px"
-                />
-                <div class="card-img-overlay">
-                  <h5 class="card-title">Lettering</h5>
-                  <p class="card-text">Descrição da tatuagem em destaque.</p>
-                  <p class="card-text"><small>Artista: Marina Tanaka</small></p>
+            <!-- Modal Realismo -->
+            <div class="modal fade" id="modalRealismo" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde; min-height:80vh;">
+                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                            <h4 class="modal-title mb-1">Realismo</h4>
+                            <p class="mb-0">Estilo que busca reproduzir imagens com máxima fidelidade.</p>
+                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Exemplos</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img src="images/portfolio/erick2.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/erick3.jpg" class="m-2" width="320"/>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
 
-            <div class="col mb-4">
-              <div class="card text-bg-dark">
-                <img
-                  src="images/portfolio/tanaka3.jpg"
-                  class="card-img foto-portfolio align-self-center w-100 h-100"
-                  alt="Foto Portfolio"
-                  style="min-height: 520px"
-                />
-                <div class="card-img-overlay">
-                  <h5 class="card-title">Fine-Line</h5>
-                  <p class="card-text">Descrição da tatuagem em destaque.</p>
-                  <p class="card-text"><small>Artista: Marina Tanaka</small></p>
+            <!-- Modal Fine-Line -->
+            <div class="modal fade" id="modalFineLine" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde; min-height:80vh;">
+                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                            <h4 class="modal-title mb-1">Fine-Line</h4>
+                            <p class="mb-0">Estilo caracterizado por linhas finas e delicadas.</p>
+                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Exemplos</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img src="images/portfolio/gustavo1.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/gustavo2.jpg" class="m-2" width="320"/>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- RODAPE -->
-    <footer>
-      <div class="text-center text-bg-dark">
-        <p class="p-4 pb-1">Alguns direitos reservados &copy;</p>
-        <div class="btn-group p-3">
-          <a
-            href="https://www.instagram.com/_tanaka11_"
-            target="_blank"
-            class="btn btn-outline-secondary"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/devtanaka11/"
-            target="_blank"
-            class="btn btn-outline-secondary"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a
-            href="https://github.com/tanaka-11"
-            target="_blank"
-            class="btn btn-outline-secondary"
-            ><i class="bi bi-github"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="../js/form.js"></script>
-    <script src="../js/confirm.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('modalAgendamento');
-  const select = document.getElementById('nomeTatuador');
-  const form = document.getElementById('formAgendamento');
-  const mensagem = document.getElementById('mensagemAgendamento');
-  const erro = document.getElementById('erroAgendamento');
+            <!-- Modal Tribal -->
+            <div class="modal fade" id="modalTribal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content" style="color:#cb002d; background-color:#1a1b1dde; min-height:80vh;">
+                        <div class="modal-header flex-column align-items-center border-0 pb-0">
+                            <h4 class="modal-title mb-1">Tribal</h4>
+                            <p class="mb-0">Estilo composto por linhas grossas e padrões geométricos.</p>
+                            <button type="button" class="btn-close btn-close-red position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center pt-3">
+                            <h6 class="mt-4">Exemplos</h6>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <img src="images/portfolio/anna2.jpg" class="m-2" width="320"/>
+                                <img src="images/portfolio/anna3.jpg" class="m-2" width="320"/>
 
-  // Ao abrir o modal, carregar os tatuadores
-  modal.addEventListener('show.bs.modal', function() {
-    form.style.display = 'block';
-    mensagem.style.display = 'none';
-    erro.style.display = 'none';
-    form.reset();
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    select.innerHTML = '<option value="">Carregando...</option>';
 
-    fetch('http://localhost:8080/api/usuario/listar/tatuador')
-      .then(res => res.json())
-      .then(data => {
-        select.innerHTML = '<option value="">Selecione um tatuador</option>';
-        data.forEach(tatuador => {
-          const opt = document.createElement('option');
-          opt.value = tatuador.id;
-          opt.textContent = tatuador.nome;
-          select.appendChild(opt);
-        });
-      })
-      .catch(err => {
-        select.innerHTML = '<option value="">Erro ao carregar tatuadores</option>';
-        console.error(err);
-      });
-  });
+            <!-- PORTFOLIO -->
+            <section class="portfolio">
+                <h2 class="text-center m-3 p-3">Tatuagens Destaque</h2>
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Item do portfólio -->
+                        <div class="col mb-4">
+                            <div class="card text-bg-dark">
+                                <img
+                                    src="images/portfolio/tanaka1.jpg"
+                                    class="card-img foto-portfolio align-self-center w-100 h-100"
+                                    alt="Foto Portfolio"
+                                    style="min-height: 520px"
+                                    />
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Fine-Line</h5>
+                                    <p class="card-text">Descrição da tatuagem em destaque.</p>
+                                    <p class="card-text"><small>Artista: Marina Tanaka</small></p>
+                                </div>
+                            </div>
+                        </div>
 
-  // Submissão do formulário
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+                        <div class="col mb-4">
+                            <div class="card text-bg-dark">
+                                <img
+                                    src="images/portfolio/tanaka2.jpg"
+                                    class="card-img foto-portfolio align-self-center w-100 h-100"
+                                    alt="Foto Portfolio"
+                                    style="max-height: 520px"
+                                    />
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Lettering</h5>
+                                    <p class="card-text">Descrição da tatuagem em destaque.</p>
+                                    <p class="card-text"><small>Artista: Marina Tanaka</small></p>
+                                </div>
+                            </div>
+                        </div>
 
-    const usuarioId = select.value;
-    const dataAgendamento = document.getElementById('dataAgendamento').value;
-    const nomeCliente = document.getElementById('nomeCliente').value;
+                        <div class="col mb-4">
+                            <div class="card text-bg-dark">
+                                <img
+                                    src="images/portfolio/tanaka3.jpg"
+                                    class="card-img foto-portfolio align-self-center w-100 h-100"
+                                    alt="Foto Portfolio"
+                                    style="min-height: 520px"
+                                    />
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Fine-Line</h5>
+                                    <p class="card-text">Descrição da tatuagem em destaque.</p>
+                                    <p class="card-text"><small>Artista: Marina Tanaka</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    if (!usuarioId || !dataAgendamento || !nomeCliente) return;
+        <!-- RODAPE -->
+        <footer>
+            <div class="text-center text-bg-dark">
+                <p class="p-4 pb-1">Alguns direitos reservados &copy;</p>
+                <div class="btn-group p-3">
+                    <a
+                        href="https://www.instagram.com/_tanaka11_"
+                        target="_blank"
+                        class="btn btn-outline-secondary"
+                        ><i class="bi bi-instagram"></i
+                        ></a>
+                    <a
+                        href="https://www.linkedin.com/in/devtanaka11/"
+                        target="_blank"
+                        class="btn btn-outline-secondary"
+                        ><i class="bi bi-linkedin"></i
+                        ></a>
+                    <a
+                        href="https://github.com/tanaka-11"
+                        target="_blank"
+                        class="btn btn-outline-secondary"
+                        ><i class="bi bi-github"></i
+                        ></a>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="../js/form.js"></script>
+        <script src="../js/confirm.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const modal = document.getElementById('modalAgendamento');
+                const select = document.getElementById('nomeTatuador');
+                const form = document.getElementById('formAgendamento');
+                const mensagem = document.getElementById('mensagemAgendamento');
+                const erro = document.getElementById('erroAgendamento');
 
-    fetch('http://localhost:8080/api/agendamentos', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nome: nomeCliente, usuarioId, data: dataAgendamento })
-    })
-    .then(res => {
-      if (res.ok) {
-        // Esconde formulário e mostra pop-up de sucesso
-        form.style.display = 'none';
-        mensagem.textContent = 'Agendamento realizado com sucesso!';
-        mensagem.style.display = 'block';
-        erro.style.display = 'none';
+                // Ao abrir o modal, carregar os tatuadores
+                modal.addEventListener('show.bs.modal', function () {
+                    form.style.display = 'block';
+                    mensagem.style.display = 'none';
+                    erro.style.display = 'none';
+                    form.reset();
 
-        // Fecha o modal após 2 segundos
-        setTimeout(() => {
-          const bsModal = bootstrap.Modal.getInstance(modal);
-          bsModal.hide();
-          // Limpa novamente para próxima abertura
-          form.reset();
-          mensagem.style.display = 'none';
-          form.style.display = 'block';
-        }, 2000);
-      } else throw new Error('Erro ao salvar');
-    })
-    .catch(err => {
-      console.error(err);
-      erro.style.display = 'block';
-    });
-  });
-});
-</script>
+                    select.innerHTML = '<option value="">Carregando...</option>';
 
-  </body>
+                    fetch('http://localhost:8080/api/usuario/listar/tatuador')
+                            .then(res => res.json())
+                            .then(data => {
+                                select.innerHTML = '<option value="">Selecione um tatuador</option>';
+                                data.forEach(tatuador => {
+                                    const opt = document.createElement('option');
+                                    opt.value = tatuador.id;
+                                    opt.textContent = tatuador.nome;
+                                    select.appendChild(opt);
+                                });
+                            })
+                            .catch(err => {
+                                select.innerHTML = '<option value="">Erro ao carregar tatuadores</option>';
+                                console.error(err);
+                            });
+                });
+
+                // Submissão do formulário
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const usuarioId = select.value;
+                    const dataAgendamento = document.getElementById('dataAgendamento').value;
+                    const nomeCliente = document.getElementById('nomeCliente').value;
+
+                    if (!usuarioId || !dataAgendamento || !nomeCliente)
+                        return;
+
+                    fetch('http://localhost:8080/api/agendamentos', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({nome: nomeCliente, usuarioId, data: dataAgendamento})
+                    })
+                            .then(res => {
+                                if (res.ok) {
+                                    // Esconde formulário e mostra pop-up de sucesso
+                                    form.style.display = 'none';
+                                    mensagem.textContent = 'Agendamento realizado com sucesso!';
+                                    mensagem.style.display = 'block';
+                                    erro.style.display = 'none';
+
+                                    // Fecha o modal após 2 segundos
+                                    setTimeout(() => {
+                                        const bsModal = bootstrap.Modal.getInstance(modal);
+                                        bsModal.hide();
+                                        // Limpa novamente para próxima abertura
+                                        form.reset();
+                                        mensagem.style.display = 'none';
+                                        form.style.display = 'block';
+                                    }, 2000);
+                                } else
+                                    throw new Error('Erro ao salvar');
+                            })
+                            .catch(err => {
+                                console.error(err);
+                                erro.style.display = 'block';
+                            });
+                });
+            });
+        </script>
+
+    </body>
 </html>
