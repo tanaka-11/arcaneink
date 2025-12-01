@@ -10,11 +10,19 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
         http
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/img/**", "/css/**", "/js/**").permitAll() // libera imagens e CSS
+                // libera arquivos estáticos
+                .requestMatchers("/img/**", "/css/**", "/js/**").permitAll()
+
+                // libera acesso às páginas de login e autenticação
+                .requestMatchers("/login", "/login/**").permitAll()
+
+                // libera todo o resto (se desejar)
                 .anyRequest().permitAll()
             )
+            // desabilita CSRF para permitir forms simples
             .csrf(csrf -> csrf.disable());
 
         return http.build();

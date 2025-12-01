@@ -27,23 +27,20 @@ public class LoginController {
         return "usuario"; // templates/usuario.html
     }
 
-    // Processa o login via formulário Thymeleaf
-    @PostMapping
+    // Processa o login via formulário -- ROTA ALTERADA PARA /login/auth
+    @PostMapping("/auth")
     public String login(@RequestParam String email,
                         @RequestParam String senha,
                         Model model) {
+
         Usuario usuario = usuarioService.login(email, senha);
 
         if (usuario != null) {
-            // envia o usuário para a página
             model.addAttribute("usuario", usuario);
-            return "usuario"; // templates/usuario.html
+            return "usuario"; 
         } else {
-            // mensagem de erro
             model.addAttribute("erro", "Email ou senha inválidos");
             return "login";
         }
- 
-    
     }
 }
