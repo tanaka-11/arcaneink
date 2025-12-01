@@ -201,9 +201,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-  </body>
-</html>
-<script>
+    <script>
 document.querySelector("form").addEventListener("submit", async function(e) {
   e.preventDefault(); // evita recarregar a página
 
@@ -211,6 +209,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
     nome: document.getElementById("nome").value,
     email: document.getElementById("email").value,
     senha: document.getElementById("senha").value,
+    tipo: document.getElementById("tipo").value,
     // você pode adicionar "tipo" e "descricao" se quiser salvar também
   };
 
@@ -229,3 +228,6 @@ document.querySelector("form").addEventListener("submit", async function(e) {
   }
 });
 </script>
+  </body>
+</html>
+

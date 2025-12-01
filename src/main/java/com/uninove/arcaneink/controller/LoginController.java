@@ -43,5 +43,7 @@ public class LoginController {
             model.addAttribute("erro", "Email ou senha inválidos");
             return "login";
         }
+ 
+    
     }
 }
