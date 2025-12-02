@@ -155,8 +155,8 @@ mvn test
 ## 15. Links Relevantes
 
 * Repositório GitHub: [https://github.com/tanaka-11/arcaneink](https://github.com/tanaka-11/arcaneink)
-* Vídeo YouTube: [URL_DO_VIDEO]
-* Coleção Postman: `docs/postman_collection.json`
+* Vídeo YouTube: [https://youtu.be/TKZP-Tvio8Q?si=xM47eRrKCj7LOi46]
+* Coleção Postman: [https://arcaneink.postman.co/workspace/ArcaneInk~aaef278d-9f9b-40c6-9d39-f42606b394c6/collection/29885695-bf4853a4-d9d6-4e68-9a9c-e0698b8ae04a?action=share&creator=50495634]
 * Figma: [Projeto no Figma](https://www.figma.com/site/SyYFVr9XBSSF5Jmp2aU510/PROJETO-DE-EXTENSAO-EM-CONSTRUCAO-DE-SISTEMAS-COMPUTACIONAIS---Arcane-Ink.?node-id=0-1&t=qome5GOsImL3Xl7J-1)
 
 ---
